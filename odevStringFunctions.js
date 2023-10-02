@@ -17,3 +17,11 @@ isim = isim.replaceAll(" ", "")
 console.log(isim);
 
 console.log("------------ 1. ÖDEV SONU ------------");
+
+// 2
+
+let isim2 = "cagatay yildiz";
+isim2 = isim2.replaceAll(" ","").toUpperCase();
+console.log(isim2);
+
+console.log("------------ 2. ÖDEV SONU ------------");
