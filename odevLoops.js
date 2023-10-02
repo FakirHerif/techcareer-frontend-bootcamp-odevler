@@ -8,3 +8,11 @@
 4- 1-50 arası sayılar içinde 3’e veya 5’e tam bölünebilen sayıları console a yaz ve kaç adet olduğunu console yaz. */
 
 /* ------------------------------------------ */
+
+// 1
+
+let isim = "Tech Career";
+isim = isim.split("").reverse().join("");
+console.log(isim);
+
+console.log("------------ 1. ÖDEV SONU ------------");
