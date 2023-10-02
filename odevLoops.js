@@ -16,3 +16,35 @@ isim = isim.split("").reverse().join("");
 console.log(isim);
 
 console.log("------------ 1. ÖDEV SONU ------------");
+
+// 2
+
+let sayilar = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11];
+
+let poizitifSayilar = sayilar.filter(function(sayi) {
+    return sayi > 0;
+})
+
+console.log(poizitifSayilar);
+
+let pozitifToplam = poizitifSayilar.reduce(function(adim1, adim2) {
+    return adim1 + adim2;
+});
+
+console.log(pozitifToplam);
+
+console.log("--- diğer yöntem ---")
+
+// diğer yöntem
+
+let sayilarYedek = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11];
+let toplam = 0;
+
+for (let i = 0; i < sayilarYedek.length; i++) {
+    if (sayilarYedek[i] > 0) {
+        toplam += sayilarYedek[i];
+    }
+}
+console.log(toplam);
+
+console.log("------------ 2. ÖDEV SONU ------------");
