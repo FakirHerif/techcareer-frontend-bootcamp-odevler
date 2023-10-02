@@ -41,3 +41,11 @@ isim4 = isim4.replaceAll("  "," ");
 console.log(isim4);
 
 console.log("------------ 4. ÖDEV SONU ------------");
+
+// 5
+
+let isim5 = "**Tech Career**";
+isim5 = isim5.replaceAll("**","");
+console.log(isim5);
+
+console.log("------------ 5. ÖDEV SONU ------------");
