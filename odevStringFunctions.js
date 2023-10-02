@@ -76,3 +76,19 @@ yedekisim7 = yedekisim7.replace("teknolojileri", "TEKNOLOJİLERİ")
 console.log(yedekisim7);
 
 console.log("------------ 7. ÖDEV SONU ------------");
+
+// 8
+
+let isim8 = "Tech bilişim";
+ilkHarf = isim8.substring(0,1).toUpperCase([0]);
+console.log(ilkHarf);
+ikinciHarf = isim8.substring(5,6).toUpperCase([0]);
+console.log(ikinciHarf);
+
+// veya daha kolay bir yol
+
+let yedekisim8 = "Tech bilişim";
+yedekisim8 = yedekisim8.replace("T", "T") && yedekisim8.replace("b", "B");
+console.log(yedekisim8);
+
+console.log("------------ 8. ÖDEV SONU ------------");
