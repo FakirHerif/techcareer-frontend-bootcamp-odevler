@@ -33,3 +33,11 @@ isim3 = isim3.replaceAll("******","");
 console.log(isim3);
 
 console.log("------------ 3. ÖDEV SONU ------------");
+
+// 4
+
+let isim4 = "Çağatay  Yıldız";
+isim4 = isim4.replaceAll("  "," ");
+console.log(isim4);
+
+console.log("------------ 4. ÖDEV SONU ------------");
