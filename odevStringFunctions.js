@@ -10,3 +10,10 @@
 
 /* ------------------------------------------ */
 
+// 1
+
+let isim = "  Çağatay Yıldız";
+isim = isim.replaceAll(" ", "")
+console.log(isim);
+
+console.log("------------ 1. ÖDEV SONU ------------");
