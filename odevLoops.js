@@ -48,3 +48,11 @@ for (let i = 0; i < sayilarYedek.length; i++) {
 console.log(toplam);
 
 console.log("------------ 2. ÖDEV SONU ------------");
+
+// 3
+
+let sayilar3 = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11];
+sayilar3 = Math.max(...sayilar3);
+console.log(sayilar3);
+
+console.log("------------ 3. ÖDEV SONU ------------");
