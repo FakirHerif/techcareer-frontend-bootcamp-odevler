@@ -57,3 +57,22 @@ isim6 = "***" + isim6 + "***"
 console.log(isim6);
 
 console.log("------------ 6. ÖDEV SONU ------------");
+
+// 7
+
+let isim7 = "Tech Career Bilişim teknolojileri";
+let sonKelime = isim7.substring(20)
+sonKelime = sonKelime.toUpperCase();
+console.log(sonKelime);         // Sadece son kelimeyi büyük yazdırdım
+isim7 = isim7.substring(0, 20);
+isim7 = isim7 + sonKelime
+console.log(isim7);             // büyük kelimeyi cümleye dahil ettim ve yazdırdım
+
+// veya daha kolay bir yol;
+
+console.log("--- diğer yöntem ---")
+let yedekisim7 = "Tech Career Bilişim teknolojileri";
+yedekisim7 = yedekisim7.replace("teknolojileri", "TEKNOLOJİLERİ")
+console.log(yedekisim7);
+
+console.log("------------ 7. ÖDEV SONU ------------");
