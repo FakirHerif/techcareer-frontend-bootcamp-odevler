@@ -56,3 +56,20 @@ sayilar3 = Math.max(...sayilar3);
 console.log(sayilar3);
 
 console.log("------------ 3. ÖDEV SONU ------------");
+
+// 4
+
+let mod = [];
+
+for (let i = 1; i <= 50; i++) {
+    if((i % 3 === 0 ) || (i % 5 === 0)) {
+        console.log(i);
+        mod.push(i);
+    }
+};
+
+console.log(mod);
+
+console.log("3'e veya 5'e bölünebilen toplam eleman sayısı: " + mod.length);
+
+console.log("------------ 3. ÖDEV SONU ------------");
