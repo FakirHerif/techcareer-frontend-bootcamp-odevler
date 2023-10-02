@@ -25,3 +25,11 @@ isim2 = isim2.replaceAll(" ","").toUpperCase();
 console.log(isim2);
 
 console.log("------------ 2. ÖDEV SONU ------------");
+
+// 3
+
+let isim3 = "******Çağatay Yıldız";
+isim3 = isim3.replaceAll("******","");
+console.log(isim3);
+
+console.log("------------ 3. ÖDEV SONU ------------");
