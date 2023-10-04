@@ -4,8 +4,13 @@ div {
     border: 2px solid red;
     background-color: #2D9D13;
     position: relative;
+    width: 75%;
+    overflow: hidden;
 }
 
+.at {
+    max-width: 100%;
+}
 
 .finishLine {
     position: absolute;
