@@ -1,0 +1,27 @@
+div {
+    margin: 200px;
+    padding: 20px;
+    border: 2px solid red;
+    background-color: #2D9D13;
+    position: relative;
+}
+
+
+.finishLine {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin-right: -62.5px;
+    height: 711px;
+}
+
+.startLine {
+    position: absolute;
+    top: 0;
+    right: 1;
+    bottom: 0;
+    border: none;
+    height: 711px;
+    margin-left: 160px;
+}
