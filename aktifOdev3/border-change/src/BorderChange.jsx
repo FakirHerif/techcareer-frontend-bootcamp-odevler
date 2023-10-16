@@ -7,8 +7,8 @@ function BorderChange() {
     const [boxHeightInput, setBoxHeightInput] = useState("");
 
     const changeSize = () => {
-        setBoxWidth(200 + parseInt(boxWidthInput, 10));
-        setBoxHeight(200 + parseInt(boxHeightInput, 10));
+        setBoxWidth(parseInt(boxWidthInput, 10));
+        setBoxHeight(parseInt(boxHeightInput, 10));
     }
 
     return (
