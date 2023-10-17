@@ -3,18 +3,37 @@ import { productsData } from './data/productsData'
 
 function Odev() {
     const [datas, setDatas] = useState(productsData);
-    const [sortData, setSortData] = useState('AtoZ');
-    
-    const sortDatas = (column) => {
+    const [sortData, setSortData] = useState(false);
+
+
+    const sortId = () => {
         const sortedDatas = [...datas];
-        if (sortData === 'AtoZ') {
-            sortedDatas.sort((a, b) => a[column].localeCompare(b[column]));
-            setSortData('ZtoA');
+        if (sortData) {
+            sortedDatas.sort((a, b) => a.id - b.id);
         } else {
-            sortedDatas.sort((a, b) => b[column].localeCompare(a[column]));
-            setSortData('AtoZ');
+            sortedDatas.sort((a, b) => b.id - a.id);
         }
         setDatas(sortedDatas);
+        setSortData(!sortData);
+    }
+
+    const sortField = (field) => {
+        const sortedDatas = [...datas];
+        if (sortData) {
+            sortedDatas.sort((a, b) => {
+                if (!a[field]) return 1;
+                if (!b[field]) return -1;
+                return a[field].localeCompare(b[field]);
+            });
+        } else {
+            sortedDatas.sort((a, b) => {
+                if (!a[field]) return -1;
+                if (!b[field]) return 1;
+                return b[field].localeCompare(a[field]);
+            });
+        }
+        setDatas(sortedDatas);
+        setSortData(!sortData);
     }
 
     const deleteData = (id) => {
@@ -30,10 +49,10 @@ function Odev() {
     <table className='w3-table w3-striped'>
         <thead>
             <tr>
-                <th>ID</th>
-                <th onClick={() => sortDatas('companyName')}>COMPANY NAME</th>
-                <th onClick={() => sortDatas('contactName')}>CONTACT NAME</th>
-                <th onClick={() => sortDatas('contactTitle')}>CONTACT TITLE</th>
+                <th>ID <button onClick={() => sortId('id')}>Sort</button></th>
+                <th>COMPANY NAME <button onClick={() => sortField('companyName')}>Sort</button></th>
+                <th>CONTACT NAME <button onClick={() => sortField('contactName')}>Sort</button></th>
+                <th>CONTACT TITLE <button onClick={() => sortField('contactTitle')}>Sort</button></th>
                 <th>ADDRESS</th>
                 <th>DELETE</th>
             </tr>
