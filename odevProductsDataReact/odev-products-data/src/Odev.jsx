@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {productsData} from './data/productsData'
+import { productsData } from './data/productsData'
 
 function Odev() {
 
@@ -20,6 +20,33 @@ function Odev() {
                 <th>DELETE</th>
             </tr>
         </thead>
+        <tbody>
+            {
+                datas.map(item => {
+                    return <tr>
+                        <td>{item.id}</td>
+                        <td>{item.companyName}</td>
+                        <td>{item.contactName}</td>
+                        <td>{item.contactTitle}</td>
+                        <td>
+                            <div>
+                                Street: {item.address.street}
+                                <br />
+                                City: {item.address.city}
+                                <br />
+                                Region: {item.address.region}
+                                <br />
+                                Postal Code: {item.address.postalCode}
+                                <br />
+                                Country: {item.address.country}
+                                <br />
+                                Phone: {item.address.phone}
+                                </div></td>
+                        <td><button>DELETE</button></td>
+                    </tr>
+                })
+            }
+        </tbody>
     </table>
 
 
