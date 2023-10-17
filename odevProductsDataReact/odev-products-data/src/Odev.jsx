@@ -4,7 +4,13 @@ import { productsData } from './data/productsData'
 function Odev() {
 
     const [datas, setDatas] = useState(productsData);
-
+    const deleteData = (id) => {
+        let result = window.confirm("Are you sure to delete it?");
+        if (result) {
+            let fdatas = datas.filter(ali => ali.id !== id);
+            setDatas([...fdatas])
+        }
+    }
 
   return (
 <>
@@ -29,6 +35,7 @@ function Odev() {
                         <td>{item.contactName}</td>
                         <td>{item.contactTitle}</td>
                         <td>
+                            
                             <div>
                                 Street: {item.address.street}
                                 <br />
@@ -41,8 +48,10 @@ function Odev() {
                                 Country: {item.address.country}
                                 <br />
                                 Phone: {item.address.phone}
-                                </div></td>
-                        <td><button>DELETE</button></td>
+                            </div>
+                            
+                        </td>
+                        <td><button className='w3-button w3-red' onClick={() => deleteData(item.id)}>DELETE</button></td>
                     </tr>
                 })
             }
