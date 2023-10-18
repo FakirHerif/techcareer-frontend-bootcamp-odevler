@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import moment from 'moment';
+import 'moment/locale/tr'
 
 function Orders() {
 
@@ -25,6 +27,10 @@ function Orders() {
             })
         }
     }
+
+    const zaman = (tarih) => {
+        return moment(tarih).format('LLL');
+      };
 
   return (
     <>
@@ -54,9 +60,9 @@ function Orders() {
                     <td>{orders.id}</td>
                     <td>{orders.customerId}</td>
                     <td>{orders.employeeId}</td>
-                    <td>{orders.orderDate}</td>
-                    <td>{orders.requiredDate}</td>
-                    <td>{orders.shippedDate}</td>
+                    <td>{zaman(orders.orderDate)}</td>
+                    <td>{zaman(orders.requiredDate)}</td>
+                    <td>{zaman(orders.shippedDate)}</td>
                     <td>{orders.shipVia}</td>
                     <td>{orders.freight}</td>
                     <td>{orders.shipName}</td>
