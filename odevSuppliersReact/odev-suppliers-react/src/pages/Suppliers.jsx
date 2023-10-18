@@ -30,8 +30,9 @@ function Suppliers() {
 
   return (
     <>
-    
-    <table>
+    <h1>Suppliers Length: {suppliers.length}</h1>
+    <br />
+    <table className='w3-table w3-striped'>
         <thead>
             <tr>
                 <th>ID</th>
@@ -41,7 +42,7 @@ function Suppliers() {
                 <th>ADDRESS</th>
             </tr>
         </thead>
-    </table>
+    
     <tbody>
         {
             suppliers && suppliers.map(suppliers => {
@@ -66,11 +67,12 @@ function Suppliers() {
                         
                         </div>
                     </td>
-                    <td><button onClick={() => deleteSuppliers(suppliers.id)}>Delete</button></td>
+                    <td><button className='w3-button w3-red' onClick={() => deleteSuppliers(suppliers.id)}>Delete</button></td>
                 </tr>
             })
         }
     </tbody>
+    </table>
     </>
   )
 }

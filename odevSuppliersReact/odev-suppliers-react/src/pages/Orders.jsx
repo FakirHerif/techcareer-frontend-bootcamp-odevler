@@ -28,13 +28,15 @@ function Orders() {
 
   return (
     <>
-    
-    <table>
+    <h1>Orders Length: {orders.length}</h1>
+    <br />
+    <table className='w3-table w3-striped'>
         <thead>
             <tr>
                 <th>ID</th>
                 <th>CUSTOMER ID</th>
                 <th>EMPLOYEE ID</th>
+                <th>ORDER DATE</th>
                 <th>REQUIRED DATA</th>
                 <th>SHIPPED DATE</th>
                 <th>SHIP VIA</th>
@@ -44,7 +46,7 @@ function Orders() {
                 <th>DETAILS</th>
             </tr>
         </thead>
-    </table>
+    
     <tbody>
         {
             orders && orders.map(orders => {
@@ -84,12 +86,12 @@ function Orders() {
                             <br />
                         </div>
                     </td>
-                    <td><button onClick={() => deleteOrders(orders.id)}>Delete</button></td>
+                    <td><button className='w3-button w3-red' onClick={() => deleteOrders(orders.id)}>Delete</button></td>
                 </tr>
             })
         }
     </tbody>
-
+    </table>
 
     </>
   )
