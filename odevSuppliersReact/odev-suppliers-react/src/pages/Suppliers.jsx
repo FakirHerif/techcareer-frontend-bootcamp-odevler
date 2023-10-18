@@ -7,11 +7,25 @@ function Suppliers() {
     const [suppliers, setSuppliers] = useState([]);
 
     useEffect(() => {
+        veriGetir();
+    }, [])
+
+    const veriGetir = () => {
         axios.get('https://northwind.vercel.app/api/suppliers')
         .then(res => {
             setSuppliers(res.data)
         })
-    }, [])
+    }
+
+    const deleteSuppliers = (id) => {
+        let eminmisin = window.confirm("Are you sure you want to delete this?");
+        if (eminmisin) {
+            axios.delete('https://northwind.vercel.app/api/suppliers/' + id)
+            .then(res => {
+                veriGetir();
+            })
+        }
+    }
     
 
   return (
@@ -30,7 +44,7 @@ function Suppliers() {
     </table>
     <tbody>
         {
-            suppliers.map(suppliers => {
+            suppliers && suppliers.map(suppliers => {
                 return <tr>
                     <td>{suppliers.id}</td>
                     <td>{suppliers.companyName}</td>
@@ -52,7 +66,7 @@ function Suppliers() {
                         
                         </div>
                     </td>
-                    <td><button onClick={() => delete(suppliers.id)}>Delete</button></td>
+                    <td><button onClick={() => deleteSuppliers(suppliers.id)}>Delete</button></td>
                 </tr>
             })
         }
